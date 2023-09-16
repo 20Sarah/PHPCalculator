@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    
+</head>
+<script>
+    function add(){
+    
+        var fnum = document.getElementById("num1").value;
+        if(isNaN(fnum)){
+            alert(fnum+" Is not a valid number in the First name Text Box");
+            return false;
+        
+        
+        }
+        fnum = Number(fnum);
+
+        var snum= (document.getElementById("num2").value);
+        if(isNaN(snum)){
+            alert(snum+" Is not a valid number");
+            return;
+         }
+        snum = Number(snum);
+
+       
+        var sum = fnum + snum;
+        // alert(sum);
+        document.getElementById("sum").value = sum;
+
+     }
+
+     
+     
+</script>
+<body>
+   <h1>System that adds two numbers</h1> 
+   <label for="num1">First Number</label><br/>
+   <input type="text" id="num1" value=""><br/>
+
+   <label for="num2">Second Number</label><br/>
+   <input type="text" id="num2" value=""><br/>
+  
+   <label for="sum">Sum</label><br/>
+   <input type="text" id="sum" value="" disabled><br/>
+   <br/>
+   <input type="button"  value="add" onclick="add()"><br/>
+   
+   
+
+
+</body>
+</html>
